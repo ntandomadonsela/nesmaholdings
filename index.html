@@ -45,6 +45,7 @@ nav {
   z-index: 1000;
 }
 
+/* FIXED LOGO (single clean version only) */
 nav .logo {
   background: linear-gradient(145deg, #2b2622, #1f1b18);
   padding: 8px 16px;
@@ -54,58 +55,23 @@ nav .logo {
   gap: 2px;
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  backdrop-filter: blur(6px);
-}
-
-nav .logo .n {
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  font-family: 'Playfair Display', serif;
-}
-
-nav .logo .sep {
-  color: #cab17e;
-  font-weight: 600;
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-nav .logo .n {
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-nav .logo .sep {
-  color: #b89a5a;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-nav .logo .sep {
-  color: #ffffff;
-  font-weight: 600;
-}
-
-nav img { height: 45px; }
-
-nav .logo {
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: #1a1a1a;
 }
 
 nav .logo span {
   color: #ffffff;
-  background: #1a1a1a;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin: 0 2px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
 }
+
+nav .logo .sep {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav img { height: 45px; }
 
 nav a {
   margin: 0 12px;
@@ -116,7 +82,7 @@ nav a {
   letter-spacing: 1px;
 }
 
-nav a:hover { color: #b89a5aS; }
+nav a:hover { color: #b89a5a; }
 
 .hero {
   height: 92vh;
@@ -273,7 +239,7 @@ footer {
 
 <nav>
   <div class="logo">
-    <span class="n">N</span><span class="sep">|</span><span class="n">N</span>
+    <span>N</span><span class="sep">|</span><span>N</span>
   </div>
   <div>
     <a href="#home">Home</a>
@@ -289,11 +255,6 @@ footer {
   <h1>NESMA HOLDINGS</h1>
   <p>Nurturing Businesses. Delivering Results.</p>
   <h2>Construction • Technology • Agriculture • Energy Across Africa</h2>
-
-  <div class="hero-buttons">
-    <button class="primary">Explore Services</button>
-    <button class="secondary">Contact Us</button>
-  </div>
 </section>
 
 <section>
@@ -350,7 +311,7 @@ footer {
 
   <div class="company-section">
     <h3>Sinewami Poultry (Pty) Ltd</h3>
-    <p>Large-scale poultry production focused on food security, sustainable farming, and rural employment. 
+    <p>Large-scale poultry production focused on food security, sustainable farming, and rural employment.</p>
     <p>"Eat Fresh. Buy Local."</p>
   </div>
 
@@ -386,18 +347,13 @@ footer {
     </div>
 
     <div class="form-container">
-  <form action="https://formspree.io/f/xaqayjvo" method="POST">
-
-    <input type="text" name="name" placeholder="Your Name" required>
-
-    <input type="email" name="email" placeholder="Your Email" required>
-
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
-    <button type="submit">Send Message</button>
-
-  </form>
-</div>
+      <form action="https://formspree.io/f/xaqayjvo" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
 
   </div>
 </section>
