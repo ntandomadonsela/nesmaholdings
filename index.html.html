@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nesma Holdings (Pty) Ltd — Nurturing Businesses. Delivering Results.</title>
+<!-- Nesma Holdings favicon — inline SVG logo mark -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' rx='10' fill='%23101827'/%3E%3C!-- corner brackets --%3E%3Cpath d='M10 5 H5 V10' stroke='%23d4aa52' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 5 H55 V10' stroke='%23d4aa52' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M5 50 V55 H10' stroke='%23d4aa52' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M55 50 V55 H50' stroke='%23d4aa52' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3C!-- N left --%3E%3Ctext x='16' y='40' font-size='24' font-family='Georgia,serif' font-weight='500' fill='%23f3f5fa' text-anchor='middle'%3EN%3C/text%3E%3C!-- centre bar --%3E%3Cline x1='30' y1='16' x2='30' y2='44' stroke='%23d4aa52' stroke-width='1.4'/%3E%3C!-- N right --%3E%3Ctext x='44' y='40' font-size='24' font-family='Georgia,serif' font-weight='500' fill='%23f3f5fa' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="alternate icon" href="data:image/png;base64,iVBORw0KGgo=">
+<meta name="theme-color" content="#101827">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* Refined corporate midnight-navy — between the original near-black
+     and the brighter draft. NesAI restores its own dark palette below. */
+  --bg:#101827;
+  --bg2:#162035;
+  --bg3:#1c2942;
+  --surface:#222f4a;
+  --surface2:#2a385a;
+  --border:#2f4163;
+  --border2:#41587e;
+  --border3:#56709a;
+  --gold:#d4aa52;
+  --gold2:#edd98a;
+  --gold3:#b8922a;
+  --silver:#9ca3af;
+  --accent:#0ea5e9;
+  --accent2:#38bdf8;
+  --green:#4ade80;
+  --text:#f3f5fa;
+  --text2:#b8c4dc;
+  --text3:#7c8da9;
+  --font-serif:'Cormorant Garamond',serif;
+  --font-sans:'DM Sans',sans-serif;
+  --radius:10px;
+  --radius-lg:18px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-sans);font-size:16px;line-height:1.7;overflow-x:hidden}
+
+/* NesAI keeps its original deep-dark palette — do not change. */
+#nesai-page{
+  --bg:#0d1117;
+  --bg2:#111720;
+  --bg3:#141c28;
+  --surface:#192130;
+  --surface2:#1e2838;
+  --border:#253448;
+  --border2:#2e4060;
+  --border3:#3a5070;
+  --text:#f7f3ec;
+  --text2:#a8b4cc;
+  --text3:#6a7a96;
+}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 5%;height:70px;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+nav.scrolled{background:rgba(16,24,39,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none;cursor:pointer}
+.nav-brand .brand-mark{flex-shrink:0;display:block;transition:transform .4s ease,filter .4s ease;filter:drop-shadow(0 2px 6px rgba(243,245,250,.08))}
+.nav-brand:hover .brand-mark{transform:translateY(-1px) scale(1.03);filter:drop-shadow(0 4px 12px rgba(243,245,250,.18))}
+.nav-brand .brand-text{display:flex;flex-direction:column;gap:2px}
+.nav-brand .holding{font-family:var(--font-serif);font-size:19px;font-weight:500;letter-spacing:.16em;color:var(--text);text-transform:uppercase}
+.nav-brand .division{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-family:var(--font-sans);font-weight:400}
+/* Reusable N|N monogram — engraved crest */
+.brand-mark .mk-bracket{fill:none;stroke:var(--text);stroke-width:1.4;stroke-linecap:square}
+.brand-mark .mk-letter{font-family:var(--font-serif);font-weight:400;fill:var(--text);letter-spacing:0}
+.brand-mark .mk-bar{stroke:var(--text);stroke-width:1.1;stroke-linecap:square}
+.footer-mark{margin-bottom:1rem;display:block}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text2);font-size:13px;font-weight:400;letter-spacing:.04em;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:transparent;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:8px 20px;border-radius:6px;font-family:var(--font-sans);font-size:12px;font-weight:500;cursor:pointer;transition:all .25s;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.nav-cta:hover{background:rgba(201,168,76,.08);border-color:var(--gold)}
+
+/* ── MOBILE MENU TOGGLE ── */
+.menu-toggle{display:none;background:transparent;border:1px solid var(--border2);border-radius:8px;width:42px;height:42px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;z-index:320}
+.menu-toggle span{display:block;width:18px;height:1.5px;background:var(--text);transition:transform .3s,opacity .3s}
+.menu-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:70px 0 0 0;background:rgba(16,24,39,.98);backdrop-filter:blur(24px);z-index:290;display:none;flex-direction:column;padding:2rem 5% 3rem;gap:.25rem;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--text);text-decoration:none;font-family:var(--font-serif);font-size:24px;font-weight:400;padding:1rem 0;border-bottom:1px solid var(--border);letter-spacing:.02em}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu .nav-cta{margin-top:1.5rem;text-align:center;padding:14px 24px;font-size:13px;align-self:flex-start}
+#nesai-page .mobile-menu{background:rgba(13,17,23,.98);inset:68px 0 0 0}
+
+/* ── SHARED ── */
+section{padding:110px 5%}
+.sec-eyebrow{font-family:var(--font-sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-weight:500}
+.sec-title{font-family:var(--font-serif);font-size:clamp(34px,4.5vw,58px);font-weight:400;line-height:1.08;letter-spacing:.01em;margin-bottom:1.5rem}
+.sec-sub{font-size:15px;color:var(--text2);max-width:540px;line-height:1.85;font-weight:300;margin-bottom:3.5rem}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);margin:0 5%}
+.gold{color:var(--gold)}
+.italic{font-style:italic}
+.fade-in{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* ── HOLDING PAGE ── */
+#holding-page{display:block}
+#nesai-page{display:none;opacity:0;transition:opacity .5s}
+#nesai-page.active{display:block;opacity:1}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 5%;padding-top:70px;position:relative;overflow:hidden}
+
+/* Cinematic skyline backdrop with Ken-Burns zoom */
+.hero-cinematic-bg{
+  position:absolute;inset:0;z-index:0;
+  background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=75&auto=format&fit=crop');
+  background-size:cover;background-position:center bottom;
+  animation:kenBurns 22s ease-in-out infinite alternate;
+  transform-origin:center center;
+}
+@keyframes kenBurns{
+  0%{transform:scale(1.0) translateX(0);filter:brightness(.22) saturate(0.8)}
+  100%{transform:scale(1.12) translateX(-2%);filter:brightness(.18) saturate(0.6)}
+}
+.hero-cinematic-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,
+    rgba(10,14,22,.55) 0%,
+    rgba(10,14,22,.3) 40%,
+    rgba(10,14,22,.65) 75%,
+    rgba(16,24,39,1) 100%
+  );
+}
+/* Subtle vignette edges */
+.hero-cinematic-vignette{
+  position:absolute;inset:0;z-index:2;
+  background:radial-gradient(ellipse 90% 80% at 50% 50%,transparent 50%,rgba(10,14,22,.55) 100%);
+  pointer-events:none;
+}
+
+.hero-grid{position:absolute;inset:0;z-index:3;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:64px 64px;opacity:.18;mask-image:radial-gradient(ellipse 75% 60% at 50% 50%,black,transparent 80%)}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:4}
+.orb-gold{width:650px;height:650px;background:radial-gradient(circle,rgba(212,170,82,.18) 0%,transparent 70%);top:-200px;right:-200px}
+.orb-blue{width:350px;height:350px;background:radial-gradient(circle,rgba(14,165,233,.1) 0%,transparent 70%);bottom:0;left:8%}
+/* All hero content needs z-index above backdrop */
+#hero > *:not(.hero-cinematic-bg):not(.hero-cinematic-overlay):not(.hero-cinematic-vignette):not(.hero-grid):not(.hero-orb){position:relative;z-index:5}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 16px;border:1px solid var(--border2);border-radius:100px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text3);margin-bottom:2.25rem;background:rgba(34,47,74,.7);backdrop-filter:blur(8px);font-family:var(--font-sans)}
+.hero-eyebrow .pulse{width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px var(--gold);animation:pulse 2.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+/* Bolder serif hero title */
+h1.hero-title{font-family:var(--font-serif);font-size:clamp(52px,8.5vw,108px);font-weight:600;line-height:.97;letter-spacing:-.015em;max-width:960px;margin-bottom:1.25rem;text-shadow:0 2px 32px rgba(0,0,0,.6)}
+.hero-title em{font-style:italic;color:var(--gold);font-weight:500}
+.hero-sectors-row{display:flex;gap:.625rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.s-tag{padding:4px 14px;border:1px solid var(--border);border-radius:100px;font-size:11px;color:var(--text3);letter-spacing:.06em;font-family:var(--font-sans);font-weight:400;transition:border-color .2s,color .2s}
+.s-tag:hover{border-color:var(--border2);color:var(--text2)}
+.hero-sub{font-size:clamp(15px,1.6vw,17px);color:var(--text2);max-width:520px;line-height:1.85;margin-bottom:2.75rem;font-weight:300}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:#0a0800;border:none;padding:13px 26px;border-radius:8px;font-family:var(--font-sans);font-size:13px;font-weight:500;cursor:pointer;transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;letter-spacing:.04em}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.22)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border2);padding:13px 26px;border-radius:8px;font-family:var(--font-sans);font-size:13px;font-weight:400;cursor:pointer;transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;letter-spacing:.04em}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:flex;gap:3rem;margin-top:4.5rem;padding-top:3rem;border-top:1px solid var(--border);flex-wrap:wrap}
+.h-stat .num{font-family:var(--font-serif);font-size:38px;font-weight:400;color:var(--text);line-height:1}
+.h-stat .lbl{font-size:11px;color:var(--text3);letter-spacing:.07em;margin-top:4px;font-family:var(--font-sans)}
+
+/* CEO building image */
+.ceo-building-img{
+  width:100%;height:180px;object-fit:cover;object-position:center 60%;
+  border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+  display:block;
+  filter:brightness(.75) saturate(.7);
+}
+.ceo-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.25rem}
+.ceo-block-inner{padding:2.25rem}
+.ceo-monogram{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:26px;font-weight:500;color:var(--bg);margin-bottom:1.25rem;letter-spacing:.05em}
+.ceo-name{font-family:var(--font-serif);font-size:22px;font-weight:500;margin-bottom:.2rem}
+.ceo-role{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-family:var(--font-sans)}
+.ceo-bio{font-size:13px;color:var(--text2);line-height:1.75;font-weight:300}
+
+/* ── PRESENCE BAND (between Sectors and Subsidiaries) ── */
+.presence-band{
+  position:relative;width:100%;height:480px;overflow:hidden;
+}
+.presence-band-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 35%;
+  filter:brightness(.28) saturate(.6);
+  transform:scale(1.04);
+  transition:transform 12s ease;
+}
+.presence-band:hover .presence-band-img{transform:scale(1.0)}
+.presence-band-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    rgba(16,24,39,.7) 0%,
+    rgba(16,24,39,.25) 50%,
+    rgba(16,24,39,.7) 100%
+  );
+}
+.presence-band-content{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:0 5%;z-index:2;
+}
+.presence-band-eyebrow{
+  font-family:var(--font-sans);font-size:10px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;
+  font-weight:500;
+  border:1px solid rgba(212,170,82,.25);padding:5px 16px;border-radius:100px;
+  background:rgba(0,0,0,.25);backdrop-filter:blur(8px);
+}
+.presence-band-title{
+  font-family:var(--font-serif);font-size:clamp(36px,5.5vw,72px);
+  font-weight:600;line-height:1.0;letter-spacing:-.01em;color:#fff;
+  max-width:900px;margin-bottom:1.25rem;
+  text-shadow:0 4px 40px rgba(0,0,0,.7);
+}
+.presence-band-title em{font-style:italic;color:var(--gold);font-weight:500}
+.presence-band-sub{
+  font-size:clamp(14px,1.5vw,17px);color:rgba(243,245,250,.7);
+  max-width:580px;line-height:1.8;font-weight:300;font-family:var(--font-sans);
+}
+.presence-band-rule{
+  width:60px;height:1px;background:var(--gold);
+  margin:1.75rem auto 0;opacity:.5;
+}
+
+/* ── ABOUT ── */
+#about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:90px;align-items:start}
+.about-lead{font-family:var(--font-serif);font-size:21px;font-weight:300;color:var(--text2);line-height:1.85;margin-bottom:1.75rem;font-style:italic}
+.about-body{font-size:15px;color:var(--text2);line-height:1.9;margin-bottom:1rem;font-weight:300}
+.about-vals{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;margin-top:2.25rem}
+.v-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.125rem 1.25rem;transition:border-color .25s}
+.v-item:hover{border-color:var(--border2)}
+.v-item h4{font-family:var(--font-sans);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.375rem;color:var(--text)}
+.v-item p{font-size:12px;color:var(--text3);line-height:1.6}
+/* offices */
+.offices-grid{display:grid;grid-template-columns:1fr 1fr;gap:.875rem}
+.office-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.125rem}
+.office-lbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-bottom:.35rem;font-family:var(--font-sans)}
+.office-val{font-family:var(--font-serif);font-size:15px;font-weight:400;color:var(--text2)}
+
+/* ── SECTORS ── */
+#sectors{background:var(--bg)}
+.sectors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.sector-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.25rem;position:relative;overflow:hidden;transition:all .3s;cursor:default}
+.sector-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity .3s}
+.sector-card:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.sector-card:hover::after{opacity:1}
+.sector-card.construction::after{background:linear-gradient(90deg,#f97316,transparent)}
+.sector-card.construction:hover{border-color:rgba(249,115,22,.25)}
+.sector-card.tech::after{background:linear-gradient(90deg,var(--accent),transparent)}
+.sector-card.tech:hover{border-color:rgba(14,165,233,.25)}
+.sector-card.agri::after{background:linear-gradient(90deg,#4ade80,transparent)}
+.sector-card.agri:hover{border-color:rgba(74,222,128,.25)}
+.sector-card.energy::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.sector-card.energy:hover{border-color:rgba(201,168,76,.25)}
+.sector-card.logistics::after{background:linear-gradient(90deg,#a78bfa,transparent)}
+.sector-card.logistics:hover{border-color:rgba(167,139,250,.25)}
+.sector-card.engineering::after{background:linear-gradient(90deg,#94a3b8,transparent)}
+.sector-card.engineering:hover{border-color:rgba(148,163,184,.25)}
+.s-num{font-family:var(--font-serif);font-size:11px;color:var(--text3);letter-spacing:.1em;margin-bottom:1.5rem;display:block}
+.sector-card h3{font-family:var(--font-serif);font-size:20px;font-weight:500;margin-bottom:.875rem;line-height:1.2}
+.sector-card p{font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:1.25rem;font-weight:300}
+.s-pill{font-size:10px;padding:3px 12px;border-radius:100px;background:var(--bg3);border:1px solid var(--border);color:var(--text3);letter-spacing:.06em;font-family:var(--font-sans)}
+
+/* ── SUBSIDIARIES ── */
+#subsidiaries{background:var(--bg2)}
+.subs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem}
+.sub-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem;transition:border-color .3s}
+.sub-card:hover{border-color:var(--border2)}
+a.sub-card{display:block;text-decoration:none;color:inherit;cursor:pointer}
+a.sub-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.25)}
+.sub-visit-hint{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-top:1.5rem;font-family:var(--font-sans);transition:gap .2s}
+a.sub-card:hover .sub-visit-hint{gap:14px}
+.sub-mark{font-family:var(--font-serif);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-weight:400}
+.sub-card h3{font-family:var(--font-serif);font-size:23px;font-weight:500;margin-bottom:.375rem;line-height:1.2}
+.sub-card .tagline{font-family:var(--font-serif);font-size:13px;font-style:italic;color:var(--text3);margin-bottom:1.25rem}
+.sub-card p{font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;margin-bottom:1.5rem}
+.chip-row{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{font-size:10px;padding:3px 11px;border-radius:100px;background:var(--bg3);border:1px solid var(--border);color:var(--text3);letter-spacing:.06em;font-family:var(--font-sans)}
+/* NesAI card — clickable */
+.sub-card.nesai-card{border-color:rgba(14,165,233,.2);cursor:pointer;position:relative;overflow:hidden}
+.sub-card.nesai-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 80% 20%,rgba(14,165,233,.06),transparent);pointer-events:none}
+.sub-card.nesai-card:hover{border-color:rgba(14,165,233,.45);transform:translateY(-2px);box-shadow:0 12px 32px rgba(14,165,233,.1)}
+.nesai-enter-hint{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-top:1.5rem;font-family:var(--font-sans);transition:gap .2s}
+.sub-card.nesai-card:hover .nesai-enter-hint{gap:14px}
+.sub-card.future-card{border-style:dashed;border-color:var(--border)}
+
+/* ── IMPACT ── */
+#impact{background:var(--bg)}
+.impact-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.impact-cell{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.25rem;text-align:center;transition:border-color .25s}
+.impact-cell:hover{border-color:var(--border2)}
+.impact-num{font-family:var(--font-serif);font-size:54px;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.625rem;letter-spacing:-.02em}
+.impact-label{font-size:13px;color:var(--text2);margin-bottom:.75rem;font-family:var(--font-sans);font-weight:400}
+.impact-desc{font-size:12px;color:var(--text3);line-height:1.65;font-weight:300}
+
+/* ── CONTACT ── */
+#contact{background:var(--bg2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:90px;align-items:start}
+.contact-lead{font-family:var(--font-serif);font-size:18px;font-style:italic;color:var(--text2);font-weight:300;line-height:1.8;margin-bottom:2rem}
+.c-detail{display:flex;align-items:flex-start;gap:.875rem;margin-bottom:1rem;font-size:14px;color:var(--text2);font-weight:300}
+.c-lbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);display:block;margin-bottom:2px;font-family:var(--font-sans)}
+.response-note{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-top:2rem}
+.response-note .rn-lbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-bottom:.375rem;font-family:var(--font-sans)}
+.response-note .rn-val{font-family:var(--font-serif);font-size:21px;font-weight:400;color:var(--text)}
+.response-note .rn-note{font-size:11px;color:var(--text3);margin-top:.25rem}
+.form-group{margin-bottom:1.125rem}
+.form-group label{display:block;font-size:10px;color:var(--text3);margin-bottom:.45rem;letter-spacing:.1em;text-transform:uppercase;font-family:var(--font-sans)}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.75rem 1rem;color:var(--text);font-family:var(--font-sans);font-size:14px;outline:none;transition:border-color .2s;resize:none;appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group select option{background:var(--surface2)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-submit{width:100%;background:var(--gold);color:#0a0800;border:none;padding:14px;border-radius:var(--radius);font-family:var(--font-sans);font-size:13px;font-weight:500;cursor:pointer;transition:all .25s;margin-top:.5rem;letter-spacing:.06em;text-transform:uppercase}
+.form-submit:hover{background:var(--gold2);transform:translateY(-1px)}
+
+/* ── FOOTER ── */
+footer{background:var(--bg3);border-top:1px solid var(--border);padding:70px 5% 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3.5rem;margin-bottom:3rem}
+.footer-wordmark{font-family:var(--font-serif);font-size:17px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.25rem}
+.footer-tagline{font-size:9px;color:var(--gold);letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.25rem;font-family:var(--font-sans)}
+.footer-desc{font-size:13px;color:var(--text3);line-height:1.75;font-weight:300}
+.footer-col h5{font-family:var(--font-sans);font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-bottom:1rem}
+.footer-col a{display:block;font-size:13px;color:var(--text3);text-decoration:none;margin-bottom:.65rem;transition:color .2s;font-weight:300}
+.footer-col a:hover{color:var(--text)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;border-top:1px solid var(--border);font-size:11px;color:var(--text3);flex-wrap:wrap;gap:1rem}
+.footer-socials{display:flex;gap:.75rem}
+.soc{width:32px;height:32px;border-radius:7px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;cursor:pointer;transition:all .2s;text-decoration:none;color:var(--text3);font-family:var(--font-serif);font-style:italic}
+.soc:hover{border-color:var(--gold);color:var(--gold)}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a{color:var(--text3);text-decoration:none;font-size:11px;transition:color .2s}
+.footer-legal a:hover{color:var(--text)}
+
+/* ════════════════════════════════
+   NesAI DIVISION PAGE
+═══════════════════════════════════ */
+#nesai-page{position:fixed;inset:0;z-index:400;background:var(--bg);overflow-y:auto;pointer-events:none;opacity:0;transition:opacity .45s}
+#nesai-page.active{pointer-events:all;opacity:1}
+
+.nesai-nav{position:sticky;top:0;z-index:100;padding:0 5%;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,7,14,.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(14,165,233,.15)}
+.nesai-brand{display:flex;flex-direction:column;gap:2px}
+.nesai-wordmark{font-family:var(--font-serif);font-size:16px;font-weight:500;letter-spacing:.18em;color:var(--text);text-transform:uppercase}
+.nesai-parent{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-family:var(--font-sans)}
+.nesai-nav-links{display:flex;gap:1.75rem;list-style:none}
+.nesai-nav-links a{text-decoration:none;color:var(--text2);font-size:13px;letter-spacing:.04em;transition:color .2s}
+.nesai-nav-links a:hover{color:var(--text)}
+.back-btn{background:transparent;color:var(--text2);border:1px solid var(--border2);padding:8px 18px;border-radius:6px;font-family:var(--font-sans);font-size:12px;cursor:pointer;transition:all .2s;letter-spacing:.05em;display:flex;align-items:center;gap:8px}
+.back-btn:hover{color:var(--text);border-color:var(--border3)}
+
+/* NesAI Hero */
+.nesai-hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:0 5%;padding-top:68px;position:relative;overflow:hidden;background:var(--bg)}
+/* Code rain canvas sits behind everything */
+#nesai-code-canvas{position:absolute;inset:0;opacity:.12;z-index:0;pointer-events:none}
+.nesai-grid-bg{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(14,165,233,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,.08) 1px,transparent 1px);background-size:60px 60px;opacity:.4;mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black,transparent 80%)}
+.nesai-orb1{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.12) 0%,transparent 70%);top:-150px;right:-200px;pointer-events:none;z-index:1}
+.nesai-orb2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%);bottom:0;left:0;pointer-events:none;z-index:1}
+/* circuit board pattern overlay */
+.nesai-circuit-overlay{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background-image:
+    radial-gradient(circle 1px at 20px 20px,rgba(14,165,233,.15) 0%,transparent 100%),
+    radial-gradient(circle 1px at 80px 80px,rgba(14,165,233,.1) 0%,transparent 100%),
+    radial-gradient(circle 1px at 140px 40px,rgba(212,170,82,.12) 0%,transparent 100%);
+  background-size:160px 160px;
+  mask-image:radial-gradient(ellipse 90% 80% at 70% 40%,black 20%,transparent 80%);
+}
+/* floating code snippets */
+.nesai-floating-code{
+  position:absolute;z-index:2;pointer-events:none;
+  font-family:'Courier New',monospace;font-size:11px;line-height:1.7;
+  color:rgba(14,165,233,.2);white-space:pre;letter-spacing:.02em;
+}
+.nesai-floating-code.fc1{top:15%;right:5%;text-align:right;color:rgba(14,165,233,.18)}
+.nesai-floating-code.fc2{bottom:18%;left:3%;color:rgba(74,222,128,.15)}
+.nesai-floating-code.fc3{top:25%;left:2%;color:rgba(212,170,82,.12)}
+/* All NesAI hero content z-index */
+.nesai-hero > *:not(#nesai-code-canvas):not(.nesai-grid-bg):not(.nesai-orb1):not(.nesai-orb2):not(.nesai-circuit-overlay):not(.nesai-floating-code){position:relative;z-index:5}
+
+/* NesAI Logo SVG — inline in hero */
+.nesai-logo-hero{margin-bottom:2.5rem}
+.nesai-hero-title{font-family:var(--font-serif);font-size:clamp(48px,7.5vw,96px);font-weight:300;line-height:1.0;letter-spacing:-.01em;max-width:860px;margin-bottom:1.25rem}
+.nesai-hero-title .ai-accent{color:var(--accent)}
+.nesai-hero-sub{font-size:clamp(15px,1.7vw,18px);color:var(--text2);max-width:500px;line-height:1.85;font-weight:300;margin-bottom:2.5rem}
+.ai-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-ai{background:var(--accent);color:#fff;border:none;padding:13px 26px;border-radius:8px;font-family:var(--font-sans);font-size:13px;font-weight:500;cursor:pointer;transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;letter-spacing:.04em}
+.btn-ai:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(14,165,233,.28)}
+.ai-stats{display:flex;gap:3rem;margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(14,165,233,.15);flex-wrap:wrap}
+.ai-stat .num{font-family:var(--font-serif);font-size:36px;font-weight:400;color:var(--accent);line-height:1}
+.ai-stat .lbl{font-size:11px;color:var(--text3);letter-spacing:.07em;margin-top:4px;font-family:var(--font-sans)}
+
+/* NesAI Services */
+.nesai-section{padding:100px 5%;position:relative}
+/* subtle scanline texture on ai-services background */
+#ai-services{background:var(--bg)}
+#ai-services::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(14,165,233,.018) 3px,rgba(14,165,233,.018) 4px);
+  z-index:0;
+}
+#ai-services > *{position:relative;z-index:1}
+.ai-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.ai-svc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:all .3s;position:relative;overflow:hidden}
+.ai-svc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(14,165,233,.4),transparent);opacity:0;transition:opacity .3s}
+.ai-svc:hover{border-color:rgba(14,165,233,.3);transform:translateY(-3px)}
+.ai-svc:hover::before{opacity:1}
+.ai-svc-num{font-family:var(--font-serif);font-size:10px;color:var(--accent);letter-spacing:.12em;margin-bottom:1.25rem;display:block;font-weight:400}
+.ai-svc h4{font-family:var(--font-serif);font-size:19px;font-weight:500;margin-bottom:.75rem;line-height:1.2}
+.ai-svc p{font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;margin-bottom:1rem}
+.ai-svc .price{font-size:11px;color:var(--accent);font-weight:400;letter-spacing:.04em;font-family:var(--font-sans)}
+/* AI Industries */
+.ai-industries{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.ai-ind{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:border-color .25s}
+.ai-ind:hover{border-color:rgba(14,165,233,.25)}
+.ai-ind h4{font-family:var(--font-serif);font-size:16px;font-weight:500;margin-bottom:.375rem}
+.ai-ind p{font-size:12px;color:var(--text3);line-height:1.6;font-weight:300}
+/* AI Process */
+.ai-process{display:grid;grid-template-columns:repeat(5,1fr);gap:1.25rem;position:relative;padding-top:.5rem}
+.process-connector{position:absolute;top:28px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(14,165,233,.3),var(--accent),rgba(14,165,233,.3),transparent)}
+.process-step{text-align:center;position:relative}
+.ps-num{width:54px;height:54px;border-radius:50%;background:var(--surface);border:1px solid rgba(14,165,233,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:var(--font-serif);font-size:16px;font-weight:400;color:var(--accent);position:relative;z-index:1;transition:all .3s}
+.process-step:hover .ps-num{background:rgba(14,165,233,.1);border-color:var(--accent)}
+.process-step h4{font-family:var(--font-serif);font-size:15px;font-weight:500;margin-bottom:.5rem}
+.process-step p{font-size:12px;color:var(--text3);line-height:1.65;font-weight:300}
+/* AI Demo dashboard */
+.demo-shell{background:var(--surface);border:1px solid rgba(14,165,233,.2);border-radius:var(--radius-lg);overflow:hidden}
+.demo-bar{background:var(--bg3);border-bottom:1px solid var(--border);padding:.75rem 1.5rem;display:flex;align-items:center;gap:.75rem}
+.demo-dot{width:11px;height:11px;border-radius:50%}
+.demo-bar-title{font-size:12px;color:var(--text3);margin-left:.5rem;letter-spacing:.07em;font-family:var(--font-sans)}
+.demo-body{padding:1.75rem;display:grid;grid-template-columns:200px 1fr;gap:1.75rem}
+.demo-sidebar{display:flex;flex-direction:column;gap:.375rem}
+.demo-item{padding:.7rem 1rem;border-radius:7px;font-size:12px;color:var(--text3);cursor:pointer;letter-spacing:.04em;transition:all .2s;font-family:var(--font-sans)}
+.demo-item.on{background:rgba(14,165,233,.1);color:var(--accent);border:1px solid rgba(14,165,233,.2)}
+.demo-item:not(.on):hover{background:var(--surface2);color:var(--text2)}
+.demo-main{display:flex;flex-direction:column;gap:1.25rem}
+.demo-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.dm{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1rem}
+.dm .v{font-family:var(--font-serif);font-size:26px;font-weight:400;color:var(--text);margin-bottom:.25rem}
+.dm .l{font-size:11px;color:var(--text3);margin-bottom:.375rem;font-family:var(--font-sans)}
+.dm .t{font-size:11px;color:var(--green);font-family:var(--font-sans)}
+.chart-area{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;height:140px;display:flex;align-items:flex-end;gap:5px}
+.bar{flex:1;border-radius:3px 3px 0 0;background:linear-gradient(180deg,rgba(14,165,233,.8),rgba(14,165,233,.2));transition:height .4s}
+.demo-tbl{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.tbl-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:.65rem 1rem;font-size:12px;border-bottom:1px solid var(--border);align-items:center;font-family:var(--font-sans)}
+.tbl-row:last-child{border-bottom:none}
+.tbl-row.hdr{color:var(--text3);font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:var(--surface2)}
+.spill{padding:2px 9px;border-radius:100px;font-size:10px;font-weight:500;letter-spacing:.04em}
+.spill.live{background:rgba(74,222,128,.1);color:var(--green);border:1px solid rgba(74,222,128,.2)}
+.spill.hold{background:rgba(201,168,76,.1);color:var(--gold);border:1px solid rgba(201,168,76,.2)}
+/* AI Results */
+.ai-results{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.ai-result{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.25rem;transition:border-color .25s}
+.ai-result:hover{border-color:var(--border2)}
+.res-num{font-family:var(--font-serif);font-size:56px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:.5rem;letter-spacing:-.02em}
+.res-lbl{font-size:14px;color:var(--text2);margin-bottom:1rem;font-family:var(--font-sans);font-weight:400}
+.res-desc{font-size:13px;color:var(--text3);line-height:1.75;font-weight:300;margin-bottom:1.5rem}
+.res-co{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);font-family:var(--font-sans)}
+.res-co span{color:var(--gold)}
+/* AI Services neural net bg canvas */
+.nesai-neural-canvas{
+  position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.07;
+}
+/* AI Industries section — subtle binary pattern */
+#ai-industries{
+  background:var(--bg2);padding-top:80px;padding-bottom:80px;
+  position:relative;
+}
+#ai-industries::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.035'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+#ai-industries > *{position:relative;z-index:1}
+/* Process section enhanced */
+#ai-process{padding-top:80px;padding-bottom:80px;position:relative;overflow:hidden}
+#ai-process::before{
+  content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(14,165,233,.04),transparent);
+}
+#ai-process > *{position:relative;z-index:1}
+
+/* AI CTA Band enhanced */
+.ai-cta-band{
+  background:linear-gradient(135deg,rgba(14,165,233,.12),rgba(14,165,233,.04));
+  border:1px solid rgba(14,165,233,.25);border-radius:var(--radius-lg);
+  padding:2.75rem 3.5rem;display:flex;justify-content:space-between;
+  align-items:center;gap:2rem;flex-wrap:wrap;
+  position:relative;overflow:hidden;
+}
+.ai-cta-band::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 60% 100% at 0% 50%,rgba(14,165,233,.08),transparent);
+}
+.ai-cta-band > *{position:relative;z-index:1}
+.ai-cta-band h3{font-family:var(--font-serif);font-size:28px;font-weight:400;margin-bottom:.375rem}
+.ai-cta-band p{font-size:14px;color:var(--text2);font-weight:300}
+/* AI Contact */
+.ai-contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:start}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1100px){
+  .about-grid,.contact-grid,.ai-contact-grid{grid-template-columns:1fr;gap:48px}
+  .sectors-grid,.ai-services-grid,.ai-results{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .impact-row{grid-template-columns:1fr 1fr}
+  .subs-grid{grid-template-columns:1fr}
+  .ai-process{grid-template-columns:1fr 1fr;gap:2rem}
+  .process-connector{display:none}
+  .demo-body{grid-template-columns:1fr}
+  .demo-sidebar{display:none}
+}
+@media(max-width:768px){
+  nav .nav-links,.nesai-nav-links{display:none}
+  nav .nav-cta,.nesai-nav .back-btn{display:none}
+  .menu-toggle{display:flex}
+  .sectors-grid,.ai-services-grid,.ai-results,.impact-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .about-vals,.form-row,.offices-grid,.demo-metrics,.ai-industries{grid-template-columns:1fr}
+  .hero-stats,.ai-stats{gap:1.5rem}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .ai-cta-band{flex-direction:column;padding:2rem}
+  .ai-process{grid-template-columns:1fr}
+  section,.nesai-section{padding:70px 5%}
+  nav,.nesai-nav{padding:0 5%}
+  .nav-brand .holding,.nesai-wordmark{font-size:16px;letter-spacing:.12em}
+  .nav-brand .division,.nesai-parent{font-size:8px}
+  .nav-brand .brand-mark{width:42px;height:42px}
+  #hero,.nesai-hero{padding-top:90px;min-height:auto;padding-bottom:60px}
+  h1.hero-title,.nesai-hero-title{font-size:clamp(38px,10vw,56px)}
+  .hero-stats,.ai-stats{margin-top:2.5rem;padding-top:2rem;gap:2rem}
+  .h-stat .num,.ai-stat .num{font-size:30px}
+  .sec-title{font-size:clamp(28px,7vw,40px)}
+  .about-grid,.contact-grid,.ai-contact-grid{gap:36px}
+  .ceo-block,.sub-card,.sector-card,.impact-cell,.ai-svc,.ai-result{padding:1.75rem}
+  .impact-num{font-size:42px}
+  .res-num{font-size:44px}
+  footer{padding:50px 5% 30px}
+  .footer-bottom{font-size:10px}
+  .footer-legal{flex-wrap:wrap;justify-content:center;gap:1rem}
+  .nesai-logo-hero svg{width:100%;max-width:320px;height:auto}
+  .ai-cta-band{padding:2rem 1.5rem;text-align:center}
+  .ai-cta-band h3{font-size:22px}
+  .demo-body{padding:1.25rem}
+  .tbl-row{grid-template-columns:1.5fr 1fr 1fr;font-size:11px;padding:.55rem .75rem}
+  .tbl-row > *:nth-child(4){display:none}
+}
+@media(max-width:480px){
+  .hero-eyebrow{font-size:9px;padding:5px 12px}
+  .hero-actions,.ai-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn-gold,.hero-actions .btn-ghost,.ai-actions .btn-ai,.ai-actions .btn-ghost{justify-content:center}
+  .s-tag{font-size:10px;padding:3px 11px}
+  .nav-brand .brand-text{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════
+     HOLDINGS PAGE
+═════════════════════════════ -->
+<div id="holding-page">
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-brand" href="#hero">
+    <svg class="brand-mark" width="54" height="54" viewBox="0 0 60 60" aria-hidden="true">
+      <path class="mk-bracket" d="M14 6 H6 V14"/>
+      <path class="mk-bracket" d="M46 6 H54 V14"/>
+      <path class="mk-bracket" d="M6 46 V54 H14"/>
+      <path class="mk-bracket" d="M54 46 V54 H46"/>
+      <text class="mk-letter" x="18" y="40" font-size="26" text-anchor="middle">N</text>
+      <line class="mk-bar" x1="30" y1="16" x2="30" y2="44"/>
+      <text class="mk-letter" x="42" y="40" font-size="26" text-anchor="middle">N</text>
+    </svg>
+    <div class="brand-text">
+      <div class="holding">Nesma Holdings</div>
+      <div class="division">Nurturing Businesses · Delivering Results</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#sectors">Sectors</a></li>
+    <li><a href="#subsidiaries">Subsidiaries</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Get in Touch</a>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about">About</a>
+  <a href="#sectors">Sectors</a>
+  <a href="#subsidiaries">Subsidiaries</a>
+  <a href="#impact">Impact</a>
+  <a href="#contact">Contact</a>
+  <a class="nav-cta" href="#contact">Get in Touch</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-cinematic-bg"></div>
+  <div class="hero-cinematic-overlay"></div>
+  <div class="hero-cinematic-vignette"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb orb-gold"></div>
+  <div class="hero-orb orb-blue"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span>Middelburg · Pretoria · South Africa</div>
+  <h1 class="hero-title">Building Africa's Next<br><em>Industrial Era.</em></h1>
+  <div class="hero-sectors-row">
+    <span class="s-tag">Construction &amp; Infrastructure</span>
+    <span class="s-tag">Technology &amp; AI</span>
+    <span class="s-tag">Agriculture &amp; Food Production</span>
+    <span class="s-tag">Energy</span>
+    <span class="s-tag">Logistics &amp; Engineering</span>
+  </div>
+  <p class="hero-sub">A diversified investment and services group delivering sustainable value across construction, technology, agriculture, and energy sectors throughout Africa.</p>
+  <div class="hero-actions">
+    <a href="#sectors" class="btn-gold">Explore Our Sectors</a>
+    <a href="#contact" class="btn-ghost">Partner With Us</a>
+  </div>
+  <div class="hero-stats">
+    <div class="h-stat"><div class="num">6+</div><div class="lbl">Years of Growth</div></div>
+    <div class="h-stat"><div class="num">50+</div><div class="lbl">Projects Delivered</div></div>
+    <div class="h-stat"><div class="num">5</div><div class="lbl">Core Industries</div></div>
+    <div class="h-stat"><div class="num">100%</div><div class="lbl">Commitment to Quality</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about" class="fade-in">
+  <div class="about-grid">
+    <div>
+      <div class="sec-eyebrow">Who We Are</div>
+      <h2 class="sec-title">Built on Integrity.<br><em class="gold">Driven by Innovation.</em></h2>
+      <p class="about-lead">Nesma Holdings is a diversified investment and services company delivering sustainable value across multiple industries through innovation, integrity, and operational excellence.</p>
+      <p class="about-body">The group operates across construction, logistics, energy, engineering, agriculture, and technology sectors — with a philosophy rooted in progress, talent development, and strategic partnerships that drive sustainable economic growth across Africa.</p>
+      <p class="about-body">We are committed to quality, safety, and long-term value creation for clients, partners, and the communities in which we operate.</p>
+      <div class="about-vals">
+        <div class="v-item"><h4>Purpose-Driven</h4><p>Every decision anchored in long-term value and community impact.</p></div>
+        <div class="v-item"><h4>Integrity First</h4><p>Transparent dealings, honest partnerships, accountable leadership.</p></div>
+        <div class="v-item"><h4>Africa-Focused</h4><p>Local insight, continental ambition, built for the African context.</p></div>
+        <div class="v-item"><h4>Innovation Always</h4><p>From AI systems to sustainable farming — we embrace what is next.</p></div>
+      </div>
+    </div>
+    <div>
+      <div class="ceo-block">
+        <img class="ceo-building-img" 
+          src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=70&auto=format&fit=crop&crop=top"
+          alt="Nesma Holdings corporate offices" 
+          loading="lazy">
+        <div class="ceo-block-inner">
+          <div class="ceo-monogram">NM</div>
+          <div class="ceo-name">Ntando Madonsela</div>
+          <div class="ceo-role">Founder</div>
+          <p class="ceo-bio">Strategic leader driving Nesma Holdings' vision across diversified industries including infrastructure, technology, agriculture, and energy. Committed to building businesses that create lasting value for communities across Africa.</p>
+        </div>
+      </div>
+      <div class="offices-grid">
+        <div class="office-item"><div class="office-lbl">Head Office</div><div class="office-val">Middelburg, Mpumalanga</div></div>
+        <div class="office-item"><div class="office-lbl">Central Office</div><div class="office-val">Pretoria, Gauteng</div></div>
+        <div class="office-item"><div class="office-lbl">Email</div><div class="office-val">ntando@nesmaholdings.co.za</div></div>
+        <div class="office-item"><div class="office-lbl">Phone</div><div class="office-val">+27 83 646 6193</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTORS -->
+<section id="sectors" class="fade-in">
+  <div class="sec-eyebrow">Core Sectors</div>
+  <h2 class="sec-title">Six Industries. <em class="gold">One Vision.</em></h2>
+  <p class="sec-sub">A carefully selected portfolio of high-impact sectors, each aligned with Africa's long-term development priorities and the group's commitment to sustainable value creation.</p>
+  <div class="sectors-grid">
+    <div class="sector-card construction">
+      <span class="s-num">01 — Construction &amp; Infrastructure</span>
+      <h3>Construction &amp; Infrastructure</h3>
+      <p>Large-scale civil engineering, commercial construction, and infrastructure development delivered with precision, full compliance, and long-term structural integrity.</p>
+      <span class="s-pill">Civil Engineering · Commercial Build · Infrastructure</span>
+    </div>
+    <div class="sector-card tech">
+      <span class="s-num">02 — Technology &amp; AI Systems</span>
+      <h3>Technology &amp; AI Systems</h3>
+      <p>Intelligent AI systems, enterprise software, and digital transformation platforms that improve operational efficiency and decision-making. Powered by the NesAI division.</p>
+      <span class="s-pill">AI Automation · Enterprise Software · Digital Transformation</span>
+    </div>
+    <div class="sector-card agri">
+      <span class="s-num">03 — Agriculture &amp; Food Production</span>
+      <h3>Agriculture &amp; Food Production</h3>
+      <p>Sustainable agriculture through poultry production, farming systems, and food security initiatives that strengthen rural economies and create meaningful employment.</p>
+      <span class="s-pill">Poultry Production · Sustainable Farming · Food Security</span>
+    </div>
+    <div class="sector-card energy">
+      <span class="s-num">04 — Energy</span>
+      <h3>Energy</h3>
+      <p>Developing and delivering energy solutions across the continent — from project feasibility through to full operation — in service of a more energy-secure Africa.</p>
+      <span class="s-pill">Energy Development · Project Delivery · Sustainability</span>
+    </div>
+    <div class="sector-card logistics">
+      <span class="s-num">05 — Logistics</span>
+      <h3>Logistics</h3>
+      <p>End-to-end supply chain and logistics operations enabling the efficient movement of goods, raw materials, and equipment across Southern Africa's key corridors.</p>
+      <span class="s-pill">Supply Chain · Transport · Distribution</span>
+    </div>
+    <div class="sector-card engineering">
+      <span class="s-num">06 — Engineering Services</span>
+      <h3>Engineering Services</h3>
+      <p>Technical engineering expertise deployed across infrastructure, industrial, and commercial projects — safe, compliant, and cost-effective solutions to complex challenges.</p>
+      <span class="s-pill">Mechanical · Electrical · Project Engineering</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRESENCE BAND -->
+<div class="presence-band">
+  <img class="presence-band-img"
+    src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1800&q=75&auto=format&fit=crop"
+    alt="Corporate skyline — Nesma Holdings presence across Africa"
+    loading="lazy">
+  <div class="presence-band-overlay"></div>
+  <div class="presence-band-content">
+    <div class="presence-band-eyebrow">Pan-African Presence</div>
+    <h2 class="presence-band-title">One Group.<br><em>Continental Ambition.</em></h2>
+    <p class="presence-band-sub">From Mpumalanga to Gauteng — and across the African continent — Nesma Holdings operates where opportunity meets purpose.</p>
+    <div class="presence-band-rule"></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SUBSIDIARIES -->
+<section id="subsidiaries" class="fade-in">
+  <div class="sec-eyebrow">Subsidiaries</div>
+  <h2 class="sec-title">The Businesses Within <em class="gold">the Group</em></h2>
+  <p class="sec-sub">Distinct subsidiary companies, each with a clear mandate and deep domain expertise within their respective fields.</p>
+  <div class="subs-grid">
+    <a class="sub-card" href="https://www.sinewamipoultry.co.za" target="_blank" rel="noopener noreferrer">
+      <div class="sub-mark">Agricultural Division</div>
+      <h3>Sinewami Poultry (Pty) Ltd</h3>
+      <div class="tagline">"Eat Fresh. Buy Local."</div>
+      <p>Large-scale poultry production focused on food security, sustainable farming practices, and creating meaningful rural employment. Delivering fresh, locally-produced poultry while building sustainable agricultural value chains that benefit farming communities across the region.</p>
+      <div class="chip-row">
+        <span class="chip">Poultry Production</span>
+        <span class="chip">Food Security</span>
+        <span class="chip">Sustainable Farming</span>
+        <span class="chip">Rural Employment</span>
+        <span class="chip">Local Supply Chain</span>
+      </div>
+      <div class="sub-visit-hint">Visit Sinewami Poultry &nbsp;&#8594;</div>
+    </a>
+    <div class="sub-card">
+      <div class="sub-mark">Corporate Social Responsibility</div>
+      <h3>Sinewami Foundation NPC</h3>
+      <div class="tagline">Non-profit arm of the Nesma Holdings group</div>
+      <p>Dedicated to creating lasting social impact in the communities where the group operates. Through targeted programmes in education, food security, and rural upliftment, the Foundation ensures that commercial success translates directly into community development and opportunity.</p>
+      <div class="chip-row">
+        <span class="chip">Youth Education</span>
+        <span class="chip">Scholarships</span>
+        <span class="chip">Food Security</span>
+        <span class="chip">Community Farming</span>
+        <span class="chip">Rural Upliftment</span>
+      </div>
+    </div>
+    <div class="sub-card nesai-card" id="nesai-entry-card">
+      <div class="sub-mark" style="color:var(--accent)">AI &amp; Technology Division</div>
+
+      <!-- Inline NesAI Logo SVG (compact) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 130" width="220" height="78" style="margin-bottom:1rem;display:block">
+        <defs>
+          <linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#b8922a"/>
+            <stop offset="45%" style="stop-color:#e8d5a3"/>
+            <stop offset="100%" style="stop-color:#c9a84c"/>
+          </linearGradient>
+          <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#9ca3af"/>
+            <stop offset="50%" style="stop-color:#e5e7eb"/>
+            <stop offset="100%" style="stop-color:#6b7280"/>
+          </linearGradient>
+        </defs>
+        <!-- corner brackets -->
+        <g stroke="url(#cg)" stroke-width="1.2" fill="none" opacity="0.9">
+          <line x1="88" y1="8" x2="88" y2="17"/><line x1="88" y1="8" x2="97" y2="8"/>
+          <line x1="212" y1="8" x2="212" y2="17"/><line x1="212" y1="8" x2="203" y2="8"/>
+          <line x1="88" y1="63" x2="88" y2="54"/><line x1="88" y1="63" x2="97" y2="63"/>
+          <line x1="212" y1="63" x2="212" y2="54"/><line x1="212" y1="63" x2="203" y2="63"/>
+        </g>
+        <!-- N | N -->
+        <text x="133" y="59" font-family="'Times New Roman',serif" font-size="46" font-weight="400" fill="url(#cg)" text-anchor="middle">N</text>
+        <line x1="150" y1="13" x2="150" y2="60" stroke="url(#sg)" stroke-width="0.7" opacity="0.65"/>
+        <text x="167" y="59" font-family="'Times New Roman',serif" font-size="46" font-weight="400" fill="url(#cg)" text-anchor="middle">N</text>
+        <!-- NESAI wordmark -->
+        <text x="150" y="88" font-family="'Times New Roman',serif" font-size="19" font-weight="400" letter-spacing="8" fill="#f5f0e8" text-anchor="middle" opacity="0.95">NESAI</text>
+        <line x1="110" y1="94" x2="190" y2="94" stroke="url(#cg)" stroke-width="0.5" opacity="0.4"/>
+        <text x="150" y="108" font-family="'Times New Roman',serif" font-size="6.5" letter-spacing="2.8" fill="#6b7280" text-anchor="middle" opacity="0.7">BY NESMA HOLDINGS</text>
+        <!-- subtle neural dots -->
+        <g opacity="0.15" fill="#c9a84c">
+          <circle cx="76" cy="35" r="1"/><circle cx="71" cy="35" r=".6"/><circle cx="67" cy="35" r=".3"/>
+          <circle cx="224" cy="35" r="1"/><circle cx="229" cy="35" r=".6"/><circle cx="233" cy="35" r=".3"/>
+        </g>
+      </svg>
+
+      <p>The technology and AI systems division of Nesma Holdings — deploying custom AI automation, intelligent workflows, and enterprise-grade AI systems that cut operational costs and drive measurable growth for businesses across South Africa and beyond.</p>
+      <div class="chip-row">
+        <span class="chip">AI Chatbots</span>
+        <span class="chip">Workflow Automation</span>
+        <span class="chip">Custom AI Systems</span>
+        <span class="chip">AI Consulting</span>
+        <span class="chip">Digital Transformation</span>
+      </div>
+      <div class="nesai-enter-hint">Enter NesAI Division &nbsp;&#8594;</div>
+    </div>
+    <div class="sub-card future-card">
+      <div class="sub-mark">Expanding the Portfolio</div>
+      <h3>Future Divisions</h3>
+      <div class="tagline">Strategic growth under evaluation</div>
+      <p>Nesma Holdings continuously evaluates strategic opportunities across additional high-growth sectors. The group's diversified model is deliberately designed to accommodate new ventures as market conditions and strategic alignment dictate.</p>
+      <div class="chip-row">
+        <span class="chip">Media</span>
+        <span class="chip">Financial Services</span>
+        <span class="chip">Property</span>
+        <span class="chip">Investments</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact" class="fade-in">
+  <div class="sec-eyebrow">Our Impact</div>
+  <h2 class="sec-title">Numbers That <em class="gold">Matter</em></h2>
+  <p class="sec-sub">Measured outcomes across the Nesma Holdings portfolio of businesses, projects, and social initiatives.</p>
+  <div class="impact-row">
+    <div class="impact-cell"><div class="impact-num">6+</div><div class="impact-label">Years of Industry Growth</div><div class="impact-desc">Building trusted relationships and delivering results across South Africa and the broader African continent since inception.</div></div>
+    <div class="impact-cell"><div class="impact-num">50+</div><div class="impact-label">Projects Delivered</div><div class="impact-desc">Across construction, technology, agriculture, and energy — each project completed to the highest standards of quality and compliance.</div></div>
+    <div class="impact-cell"><div class="impact-num">5</div><div class="impact-label">Core Industries</div><div class="impact-desc">A deliberately diversified portfolio designed to create resilience, cross-sector synergies, and long-term sustainable value.</div></div>
+    <div class="impact-cell"><div class="impact-num">100%</div><div class="impact-label">Commitment to Quality</div><div class="impact-desc">From poultry production to AI systems — every division of Nesma Holdings operates to a single, uncompromising standard of excellence.</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade-in" style="background:var(--bg2)">
+  <div class="contact-grid">
+    <div>
+      <div class="sec-eyebrow">Get in Touch</div>
+      <h2 class="sec-title" style="font-size:clamp(28px,3.5vw,44px)">Let's Build Something <em class="gold">Together</em></h2>
+      <p class="contact-lead">Whether you're looking to partner on a construction project, explore investment opportunities, procure locally-produced poultry, or deploy AI automation in your business — we want to hear from you.</p>
+      <div class="c-detail"><div><span class="c-lbl">Email</span>ntando@nesmaholdings.co.za</div></div>
+      <div class="c-detail"><div><span class="c-lbl">Phone</span>+27 83 646 6193</div></div>
+      <div class="c-detail"><div><span class="c-lbl">Head Office</span>Middelburg, Mpumalanga</div></div>
+      <div class="c-detail"><div><span class="c-lbl">Central Office</span>Pretoria, Gauteng</div></div>
+      <div class="response-note">
+        <div class="rn-lbl">Response Time</div>
+        <div class="rn-val">Within 24–48 Hours</div>
+        <div class="rn-note">All enquiries acknowledged same business day</div>
+      </div>
+    </div>
+    <div>
+      <form id="holdings-contact-form" class="contact-form" onsubmit="return handleContactSubmit(event,'holdings')">
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Sipho" required></div>
+        <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Dlamini" required></div>
+      </div>
+      <div class="form-group"><label>Company / Organisation</label><input type="text" name="company" placeholder="Acme Corporation (Pty) Ltd"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="sipho@company.co.za" required></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="+27  __  ___  ____"></div>
+      <div class="form-group"><label>Enquiry Type</label>
+        <select name="enquiry_type">
+          <option>Construction &amp; Infrastructure</option>
+          <option>AI Automation (NesAI)</option>
+          <option>Agriculture / Poultry (Sinewami)</option>
+          <option>Energy &amp; Engineering</option>
+          <option>Logistics &amp; Supply Chain</option>
+          <option>Investment / Partnership</option>
+          <option>Foundation / CSR (Sinewami Foundation)</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Tell Us About Your Need</label><textarea name="message" rows="4" placeholder="Briefly describe your project, requirement, or question..." required></textarea></div>
+      <div class="form-feedback" id="holdings-feedback" style="display:none;margin-bottom:1rem;padding:.75rem 1rem;border-radius:var(--radius);font-size:13px;font-family:var(--font-sans)"></div>
+      <button type="submit" class="form-submit" id="holdings-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <svg class="brand-mark footer-mark" width="68" height="68" viewBox="0 0 60 60" aria-hidden="true">
+        <path class="mk-bracket" d="M14 6 H6 V14"/>
+        <path class="mk-bracket" d="M46 6 H54 V14"/>
+        <path class="mk-bracket" d="M6 46 V54 H14"/>
+        <path class="mk-bracket" d="M54 46 V54 H46"/>
+        <text class="mk-letter" x="18" y="40" font-size="26" text-anchor="middle">N</text>
+        <line class="mk-bar" x1="30" y1="16" x2="30" y2="44"/>
+        <text class="mk-letter" x="42" y="40" font-size="26" text-anchor="middle">N</text>
+      </svg>
+      <div class="footer-wordmark">Nesma Holdings</div>
+      <div class="footer-tagline">Nurturing Businesses · Delivering Results</div>
+      <p class="footer-desc">A diversified investment and services group operating across construction, technology, agriculture, energy, and logistics — committed to sustainable value creation across Africa.</p>
+      <div style="margin-top:1.25rem;padding:.875rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:inline-block">
+        <div style="font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--text3);margin-bottom:.3rem;font-family:var(--font-sans)">Registered Entity</div>
+        <div style="font-family:var(--font-serif);font-size:14px;color:var(--text2)">Nesma Holdings (Pty) Ltd · South Africa</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Divisions</h5>
+      <a href="#sectors">Construction &amp; Infrastructure</a>
+      <a href="#sectors">Technology &amp; AI</a>
+      <a href="#sectors">Agriculture &amp; Food</a>
+      <a href="#sectors">Energy</a>
+      <a href="#sectors">Logistics &amp; Engineering</a>
+    </div>
+    <div class="footer-col">
+      <h5>Subsidiaries</h5>
+      <a href="#subsidiaries">Sinewami Poultry</a>
+      <a href="#subsidiaries">Sinewami Foundation</a>
+      <a href="#subsidiaries" id="footer-nesai-link">NesAI Division</a>
+      <a href="#subsidiaries">Future Ventures</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#about">About</a>
+      <a href="#about">Leadership</a>
+      <a href="#impact">Our Impact</a>
+      <a href="#contact">Careers</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Nesma Holdings (Pty) Ltd · All rights reserved</div>
+    <div class="footer-socials">
+      <a class="soc" href="#" title="LinkedIn"><i>in</i></a>
+      <a class="soc" href="#" title="X">X</a>
+      <a class="soc" href="#" title="Instagram">Ig</a>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">POPIA Compliance</a>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /holding-page -->
+
+
+<!-- ════════════════════════
+     NesAI DIVISION PAGE
+═════════════════════════════ -->
+<div id="nesai-page">
+
+  <!-- NesAI Nav -->
+  <nav class="nesai-nav">
+    <div class="nesai-brand">
+      <div class="nesai-wordmark">NesAI</div>
+      <div class="nesai-parent">AI Division · Nesma Holdings</div>
+    </div>
+    <ul class="nesai-nav-links">
+      <li><a href="#ai-services">Services</a></li>
+      <li><a href="#ai-industries">Industries</a></li>
+      <li><a href="#ai-process">Process</a></li>
+      <li><a href="#ai-results">Results</a></li>
+      <li><a href="#ai-contact">Contact</a></li>
+    </ul>
+    <button class="back-btn" id="back-btn">&#8592; Back to Nesma Holdings</button>
+    <button class="menu-toggle" id="nesai-menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="nesai-mobile-menu">
+    <a href="#ai-services">Services</a>
+    <a href="#ai-industries">Industries</a>
+    <a href="#ai-process">Process</a>
+    <a href="#ai-results">Results</a>
+    <a href="#ai-contact">Contact</a>
+    <a href="#" id="nesai-back-mobile" class="nav-cta">← Back to Nesma Holdings</a>
+  </div>
+
+  <!-- NesAI Hero -->
+  <section class="nesai-hero">
+    <canvas id="nesai-code-canvas"></canvas>
+    <div class="nesai-grid-bg"></div>
+    <div class="nesai-orb1"></div>
+    <div class="nesai-orb2"></div>
+    <div class="nesai-circuit-overlay"></div>
+
+    <!-- Floating code snippets (decorative) -->
+    <div class="nesai-floating-code fc1">const agent = new NesAI({
+  model: 'gpt-4o',
+  tools: ['crm', 'whatsapp', 'calendar'],
+  autoReply: true,
+  language: 'zu-ZA'
+});</div>
+    <div class="nesai-floating-code fc2">✓ CRM updated
+✓ Invoice #4821 generated
+✓ Lead qualified → pipeline
+✓ WhatsApp reply sent (0.4s)
+→ 847 interactions today</div>
+    <div class="nesai-floating-code fc3">// NesAI Workflow Engine
+pipeline.add('intake')
+  .then(qualify)
+  .then(route)
+  .then(respond)
+  .deploy();</div>
+
+    <!-- Full NesAI Logo -->
+    <div class="nesai-logo-hero">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 210" width="380" height="190">
+        <defs>
+          <linearGradient id="gg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#b8922a"/>
+            <stop offset="45%" style="stop-color:#e8d5a3"/>
+            <stop offset="100%" style="stop-color:#c9a84c"/>
+          </linearGradient>
+          <linearGradient id="ss" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#9ca3af"/>
+            <stop offset="50%" style="stop-color:#e5e7eb"/>
+            <stop offset="100%" style="stop-color:#6b7280"/>
+          </linearGradient>
+        </defs>
+        <!-- circuit traces -->
+        <g opacity="0.07" stroke="#c9a84c" stroke-width="0.5" fill="none">
+          <line x1="28" y1="38" x2="52" y2="38"/><line x1="52" y1="38" x2="52" y2="24"/><circle cx="52" cy="24" r="1.5" fill="#c9a84c" stroke="none"/>
+          <line x1="350" y1="160" x2="380" y2="160"/><line x1="380" y1="160" x2="380" y2="176"/><circle cx="380" cy="176" r="1.5" fill="#c9a84c" stroke="none"/>
+          <line x1="330" y1="34" x2="356" y2="34"/><circle cx="356" cy="34" r="1.5" fill="#c9a84c" stroke="none"/>
+          <line x1="46" y1="172" x2="72" y2="172"/><circle cx="46" cy="172" r="1.5" fill="#c9a84c" stroke="none"/>
+        </g>
+        <!-- corner brackets -->
+        <g stroke="url(#gg)" stroke-width="1.4" fill="none" opacity="0.92">
+          <line x1="152" y1="26" x2="152" y2="39"/><line x1="152" y1="26" x2="165" y2="26"/>
+          <line x1="268" y1="26" x2="268" y2="39"/><line x1="268" y1="26" x2="255" y2="26"/>
+          <line x1="152" y1="94" x2="152" y2="81"/><line x1="152" y1="94" x2="165" y2="94"/>
+          <line x1="268" y1="94" x2="268" y2="81"/><line x1="268" y1="94" x2="255" y2="94"/>
+        </g>
+        <!-- N | N -->
+        <text x="179" y="88" font-family="'Times New Roman','Georgia',serif" font-size="58" font-weight="400" fill="url(#gg)" text-anchor="middle">N</text>
+        <line x1="210" y1="32" x2="210" y2="90" stroke="url(#ss)" stroke-width="0.8" opacity="0.65"/>
+        <text x="241" y="88" font-family="'Times New Roman','Georgia',serif" font-size="58" font-weight="400" fill="url(#gg)" text-anchor="middle">N</text>
+        <!-- NESAI -->
+        <text x="210" y="128" font-family="'Times New Roman','Georgia',serif" font-size="27" font-weight="400" letter-spacing="9" fill="#f5f0e8" text-anchor="middle" opacity="0.96">NESAI</text>
+        <line x1="158" y1="136" x2="262" y2="136" stroke="url(#gg)" stroke-width="0.5" opacity="0.45"/>
+        <text x="210" y="152" font-family="'Times New Roman','Georgia',serif" font-size="8" letter-spacing="3" fill="#9ca3af" text-anchor="middle" opacity="0.72">INTELLIGENT AUTOMATION. LIMITLESS IMPACT.</text>
+        <text x="210" y="169" font-family="'Times New Roman','Georgia',serif" font-size="7" letter-spacing="2" fill="#6b7280" text-anchor="middle" opacity="0.55">BY NESMA HOLDINGS</text>
+        <!-- neural dots -->
+        <g opacity="0.15" fill="#c9a84c">
+          <circle cx="132" cy="60" r="1.2"/><circle cx="127" cy="60" r=".7"/><circle cx="122" cy="60" r=".4"/>
+          <circle cx="288" cy="60" r="1.2"/><circle cx="293" cy="60" r=".7"/><circle cx="298" cy="60" r=".4"/>
+        </g>
+      </svg>
+    </div>
+
+    <h1 class="nesai-hero-title">Intelligent Systems<br>for the <span class="ai-accent">Modern</span><br><em>Enterprise.</em></h1>
+    <p class="nesai-hero-sub">NesAI deploys custom AI automation, intelligent workflows, and enterprise-grade AI systems that reduce operational costs and drive measurable growth across South African businesses.</p>
+    <div class="ai-actions">
+      <a href="#ai-contact" class="btn-ai">Book a Consultation</a>
+      <a href="#ai-services" class="btn-ghost">View Solutions</a>
+    </div>
+    <div class="ai-stats">
+      <div class="ai-stat"><div class="num">10×</div><div class="lbl">Operational Speed</div></div>
+      <div class="ai-stat"><div class="num">78%</div><div class="lbl">Avg Ticket Reduction</div></div>
+      <div class="ai-stat"><div class="num">R5K–500K</div><div class="lbl">Solution Range</div></div>
+      <div class="ai-stat"><div class="num">24/7</div><div class="lbl">AI Always On</div></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- AI SERVICES -->
+  <section id="ai-services" class="nesai-section fade-in">
+    <div class="sec-eyebrow">NesAI Services</div>
+    <h2 class="sec-title">AI Solutions Built for <span class="ai-accent" style="font-style:normal">Real Business</span></h2>
+    <p class="sec-sub">From intelligent chatbots to complex enterprise systems — each solution is custom-built, precisely scoped, and measured against your business outcomes from day one.</p>
+    <div class="ai-services-grid">
+      <div class="ai-svc"><span class="ai-svc-num">01</span><h4>AI Chatbots &amp; WhatsApp Agents</h4><p>Intelligent virtual agents on WhatsApp, your website, and social platforms — handling enquiries, bookings, and customer support 24 hours a day without additional headcount.</p><div class="price">Setup: R5,000 – R80,000 · Retainer from R1,500/mo</div></div>
+      <div class="ai-svc"><span class="ai-svc-num">02</span><h4>Workflow Automation</h4><p>Invoice generation, CRM updates, employee onboarding, payroll workflows, and reporting — fully automated using Make, n8n, Zapier, and Microsoft Power Automate.</p><div class="price">Setup from R15,000 · Monthly retainers available</div></div>
+      <div class="ai-svc"><span class="ai-svc-num">03</span><h4>Custom AI Internal Tools</h4><p>AI legal assistants, HR systems, proposal generators, compliance engines, knowledge bases, and research systems — purpose-built for your organisation's most critical workflows.</p><div class="price">Projects: R50,000 – R500,000+</div></div>
+      <div class="ai-svc"><span class="ai-svc-num">04</span><h4>CRM &amp; Lead Automation</h4><p>Intelligent CRM automation that qualifies leads, nurtures prospects, and updates pipelines automatically — so your sales team focuses only on closing.</p><div class="price">Setup from R25,000 · Retainer from R5,000/mo</div></div>
+      <div class="ai-svc"><span class="ai-svc-num">05</span><h4>Business Intelligence &amp; Analytics</h4><p>Real-time dashboards, predictive analytics, and automated reporting that surface the insights your leadership team needs to make faster, better-informed decisions.</p><div class="price">Custom pricing based on data complexity</div></div>
+      <div class="ai-svc"><span class="ai-svc-num">06</span><h4>AI Consulting &amp; Digital Transformation</h4><p>AI readiness audits, implementation roadmaps, staff AI training, operational optimisation, and ongoing advisory. Your dedicated AI transformation partner.</p><div class="price">R5,000 – R100,000+ workshops &amp; retainers</div></div>
+      <div class="ai-svc"><span class="ai-svc-num">07</span><h4>Web Development &amp; AI-Powered Platforms</h4><p>React and Next.js applications, AI-enhanced websites, custom portals, and internal tools — built to enterprise standards with AI capabilities baked in from the start.</p><div class="price">Projects from R30,000</div></div>
+      <div class="ai-svc"><span class="ai-svc-num">08</span><h4>AI Legal &amp; Document Assistants</h4><p>Custom AI systems trained on your firm's documents — reviewing contracts, drafting correspondence, researching case law, and processing legal documents in seconds.</p><div class="price">Projects from R80,000</div></div>
+      <div class="ai-svc"><span class="ai-svc-num">09</span><h4>AI Recruitment &amp; HR Platforms</h4><p>Intelligent candidate screening, automated shortlisting, onboarding workflow systems, and AI-assisted HR tools that dramatically reduce the time-cost of talent acquisition.</p><div class="price">Custom pricing</div></div>
+    </div>
+  </section>
+
+  <!-- AI INDUSTRIES -->
+  <section id="ai-industries" class="nesai-section fade-in">
+    <div class="sec-eyebrow">Industries We Serve</div>
+    <h2 class="sec-title">Domain Expertise Across <span style="color:var(--accent);font-style:normal">Every Sector</span></h2>
+    <p class="sec-sub">Solutions calibrated for the operational realities of your industry — not generic templates applied to any business.</p>
+    <div class="ai-industries">
+      <div class="ai-ind"><h4>Legal</h4><p>Document automation, contract review, AI research and client onboarding systems for law firms.</p></div>
+      <div class="ai-ind"><h4>Healthcare</h4><p>Appointment booking, patient support, clinical workflow automation for practices and clinics.</p></div>
+      <div class="ai-ind"><h4>Real Estate</h4><p>Lead qualification, property matching AI, and automated follow-up for agencies and brokers.</p></div>
+      <div class="ai-ind"><h4>Education</h4><p>Student support automation, enrolment systems, and learning management integrations.</p></div>
+      <div class="ai-ind"><h4>Logistics</h4><p>Fleet coordination, dispatch automation, and predictive supply chain intelligence.</p></div>
+      <div class="ai-ind"><h4>Finance &amp; Insurance</h4><p>Compliance automation, reporting intelligence, and client onboarding workflow systems.</p></div>
+      <div class="ai-ind"><h4>Retail</h4><p>Inventory AI, customer support automation, and personalisation and recommendation engines.</p></div>
+      <div class="ai-ind"><h4>Enterprise</h4><p>Large-scale AI transformation, departmental automation, and executive intelligence dashboards.</p></div>
+    </div>
+  </section>
+
+  <!-- AI PROCESS -->
+  <section id="ai-process" class="nesai-section fade-in">
+    <div class="sec-eyebrow">Engagement Model</div>
+    <h2 class="sec-title">From Discovery to <span style="color:var(--accent);font-style:normal">Deployment</span></h2>
+    <p class="sec-sub">A proven five-phase model ensuring every solution is precisely scoped, expertly built, and delivers from day one.</p>
+    <div class="ai-process">
+      <div class="process-connector"></div>
+      <div class="process-step"><div class="ps-num">01</div><h4>Discovery</h4><p>Deep-dive audit of operations, pain points, and automation opportunities across your business.</p></div>
+      <div class="process-step"><div class="ps-num">02</div><h4>Strategy</h4><p>AI roadmap design, technology selection, ROI modelling, and a clear implementation timeline.</p></div>
+      <div class="process-step"><div class="ps-num">03</div><h4>Build</h4><p>Custom AI system development, integration, and rigorous testing against your real workflows.</p></div>
+      <div class="process-step"><div class="ps-num">04</div><h4>Deploy</h4><p>Seamless go-live with full staff training, documentation, and hands-on handover support.</p></div>
+      <div class="process-step"><div class="ps-num">05</div><h4>Optimise</h4><p>Continuous monitoring, performance tuning, and iterative enhancement over time.</p></div>
+    </div>
+  </section>
+
+  <!-- AI DASHBOARD DEMO -->
+  <section class="nesai-section fade-in" style="background:var(--bg2);padding-top:80px;padding-bottom:80px">
+    <div class="sec-eyebrow">Platform Preview</div>
+    <h2 class="sec-title">NesAI Operations <span style="color:var(--accent);font-style:normal">Command Centre</span></h2>
+    <p class="sec-sub">A representative view of what your operations look like once NesAI is deployed — unified, intelligent, running continuously.</p>
+    <div class="demo-shell">
+      <div class="demo-bar">
+        <div class="demo-dot" style="background:#ff5f57"></div>
+        <div class="demo-dot" style="background:#febc2e"></div>
+        <div class="demo-dot" style="background:#28c840"></div>
+        <div class="demo-bar-title">NesAI Operations Dashboard · Live</div>
+      </div>
+      <div class="demo-body">
+        <div class="demo-sidebar">
+          <div class="demo-item on">Overview</div>
+          <div class="demo-item">AI Agents</div>
+          <div class="demo-item">Automations</div>
+          <div class="demo-item">Conversations</div>
+          <div class="demo-item">Analytics</div>
+          <div class="demo-item">Alerts</div>
+        </div>
+        <div class="demo-main">
+          <div class="demo-metrics">
+            <div class="dm"><div class="v">2,847</div><div class="l">Queries Handled Today</div><div class="t">+18% vs last week</div></div>
+            <div class="dm"><div class="v">99.4%</div><div class="l">Uptime This Month</div><div class="t">Above SLA target</div></div>
+            <div class="dm"><div class="v">R312K</div><div class="l">Labour Cost Saved</div><div class="t">This quarter</div></div>
+            <div class="dm"><div class="v">143</div><div class="l">Active Automations</div><div class="t">+8 added this week</div></div>
+          </div>
+          <div class="chart-area" id="demoChart"></div>
+          <div class="demo-tbl">
+            <div class="tbl-row hdr"><span>Automation</span><span>Status</span><span>Runs Today</span><span>Success</span></div>
+            <div class="tbl-row"><span>WhatsApp Lead Bot</span><span><div class="spill live">Live</div></span><span>847</span><span>98.2%</span></div>
+            <div class="tbl-row"><span>Invoice Generator</span><span><div class="spill live">Live</div></span><span>134</span><span>100%</span></div>
+            <div class="tbl-row"><span>CRM Auto-Updater</span><span><div class="spill live">Live</div></span><span>1,024</span><span>99.1%</span></div>
+            <div class="tbl-row"><span>Email Workflows</span><span><div class="spill hold">Updating</div></span><span>308</span><span>97.8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI RESULTS -->
+  <section id="ai-results" class="nesai-section fade-in">
+    <div class="sec-eyebrow">Client Outcomes</div>
+    <h2 class="sec-title">Proof in <span style="color:var(--accent);font-style:normal">Numbers</span></h2>
+    <p class="sec-sub">Representative results from NesAI deployments across South African businesses.</p>
+    <div class="ai-results">
+      <div class="ai-result"><div class="res-num">78%</div><div class="res-lbl">Reduction in customer support tickets</div><div class="res-desc">A leading fibre and ICT solutions provider implemented our WhatsApp AI automation platform to streamline installation requests, technical support, service activation, and client communications — enabling faster customer response cycles and more efficient field operations across Gauteng.</div><div class="res-co"><span>Fibre and ICT Solutions Provider</span> · Witbank, Mpumalanga</div></div>
+      <div class="ai-result"><div class="res-num">R2.1M</div><div class="res-lbl">Annual labour savings identified</div><div class="res-desc">A regional law firm implemented our AI document processing and client onboarding system, reducing administrative overhead by 62% within the first quarter of deployment.</div><div class="res-co"><span>Law Firm</span> · Middelburg, Mpumalanga</div></div>
+      <div class="ai-result"><div class="res-num">4.2×</div><div class="res-lbl">Increase in operational productivity</div><div class="res-desc">A large-scale agricultural company adopted our AI automation and communications platform to optimize livestock operations, supplier management, and customer engagement — significantly improving workflow efficiency and operational scalability across multiple farming activities.</div><div class="res-co"><span>Commercial Agriculture</span> · Pretoria</div></div>
+    </div>
+    <div class="ai-cta-band" style="margin-top:3rem">
+      <div>
+        <h3>Ready to automate your operations?</h3>
+        <p>Book a complimentary 30-minute AI readiness consultation with the NesAI team.</p>
+      </div>
+      <a href="#ai-contact" class="btn-ai">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- AI CONTACT -->
+  <section id="ai-contact" class="nesai-section fade-in" style="background:var(--bg2);padding-top:80px">
+    <div class="ai-contact-grid">
+      <div>
+        <div class="sec-eyebrow">Start Your AI Transformation</div>
+        <h2 class="sec-title" style="font-size:clamp(26px,3.5vw,42px)">Let's Build Your <em style="color:var(--accent)">AI Infrastructure</em></h2>
+        <p class="contact-lead">Book a complimentary 30-minute AI readiness consultation. We will assess your operations, identify the highest-value automation opportunities, and outline a clear path to implementation.</p>
+        <div class="c-detail"><div><span class="c-lbl">Email</span>ntando@nesmaholdings.co.za</div></div>
+        <div class="c-detail"><div><span class="c-lbl">Phone</span>+27 83 646 6193</div></div>
+        <div class="c-detail"><div><span class="c-lbl">Offices</span>Pretoria &amp; Middelburg, South Africa</div></div>
+        <div class="response-note" style="border-color:rgba(14,165,233,.2)">
+          <div class="rn-lbl">Response Time</div>
+          <div class="rn-val">Within 24 Hours</div>
+          <div class="rn-note">All AI enquiries acknowledged same business day</div>
+        </div>
+      </div>
+      <div>
+        <form id="nesai-contact-form" class="contact-form" onsubmit="return handleContactSubmit(event,'nesai')">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Sipho" required></div>
+          <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Dlamini" required></div>
+        </div>
+        <div class="form-group"><label>Company</label><input type="text" name="company" placeholder="Acme Corporation (Pty) Ltd"></div>
+        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="sipho@company.co.za" required></div>
+        <div class="form-group"><label>AI Service Interest</label>
+          <select name="enquiry_type">
+            <option>AI Chatbots &amp; WhatsApp Agents</option>
+            <option>Workflow Automation</option>
+            <option>Custom AI Internal Tools</option>
+            <option>Web Development &amp; AI Platforms</option>
+            <option>AI Legal / Document Assistant</option>
+            <option>AI Consulting &amp; Strategy</option>
+            <option>CRM &amp; Lead Automation</option>
+            <option>Business Intelligence</option>
+            <option>Not sure — need guidance</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Business Challenge</label><textarea name="message" rows="4" placeholder="Briefly describe the operational challenge or opportunity you would like us to address..." required></textarea></div>
+        <div class="form-feedback" id="nesai-feedback" style="display:none;margin-bottom:1rem;padding:.75rem 1rem;border-radius:var(--radius);font-size:13px;font-family:var(--font-sans)"></div>
+        <button type="submit" class="form-submit" id="nesai-submit" style="background:var(--accent);color:#fff">Request Free Consultation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- NesAI Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-wordmark">NesAI</div>
+        <div class="footer-tagline">Intelligent Automation. Limitless Impact.</div>
+        <p class="footer-desc">The AI Automation and Intelligent Systems division of Nesma Holdings (Pty) Ltd. Building enterprise-grade AI infrastructure for South African and African businesses.</p>
+        <div style="margin-top:1.25rem;padding:.875rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:inline-block">
+          <div style="font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--text3);margin-bottom:.3rem;font-family:var(--font-sans)">Part of</div>
+          <div style="font-family:var(--font-serif);font-size:14px;color:var(--text2)">Nesma Holdings (Pty) Ltd</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="#ai-services">AI Chatbots</a>
+        <a href="#ai-services">Workflow Automation</a>
+        <a href="#ai-services">Custom AI Tools</a>
+        <a href="#ai-services">Web Development</a>
+        <a href="#ai-services">AI Consulting</a>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <a href="#ai-industries">Legal</a>
+        <a href="#ai-industries">Healthcare</a>
+        <a href="#ai-industries">Real Estate</a>
+        <a href="#ai-industries">Finance</a>
+        <a href="#ai-industries">Enterprise</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#" id="footer-back-btn">Nesma Holdings Group</a>
+        <a href="#ai-results">Case Studies</a>
+        <a href="#ai-contact">Book Consultation</a>
+        <a href="#ai-contact">Careers</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Nesma Holdings (Pty) Ltd · NesAI Division · All rights reserved</div>
+      <div class="footer-socials">
+        <a class="soc" href="#">in</a>
+        <a class="soc" href="#">X</a>
+        <a class="soc" href="#">Ig</a>
+      </div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">POPIA Compliance</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /nesai-page -->
+
+<script>
+/* ── NesAI Code Rain Canvas ── */
+function initCodeRain(){
+  const canvas=document.getElementById('nesai-code-canvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  function resize(){
+    canvas.width=canvas.offsetWidth||canvas.parentElement.offsetWidth||1200;
+    canvas.height=canvas.offsetHeight||canvas.parentElement.offsetHeight||800;
+  }
+  resize();
+  window.addEventListener('resize',resize);
+  const charSet='01アイウエカキ{}[];=>const let async await function return import export class';
+  const chars=charSet.split('');
+  const fontSize=13;
+  let drops=[];
+  function initDrops(){
+    const cols=Math.floor(canvas.width/fontSize);
+    drops=Array(cols).fill(0).map(()=>Math.random()*-80);
+  }
+  initDrops();
+  window.addEventListener('resize',initDrops);
+  function draw(){
+    ctx.fillStyle='rgba(13,17,23,.055)';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.font=fontSize+'px "Courier New",monospace';
+    const cols=Math.floor(canvas.width/fontSize);
+    for(let i=0;i<cols;i++){
+      if(drops[i]===undefined)drops[i]=0;
+      const char=chars[Math.floor(Math.random()*chars.length)];
+      const alpha=drops[i]/(canvas.height/fontSize);
+      ctx.fillStyle=alpha<.12?'rgba(212,170,82,.5)':'rgba(14,165,233,.3)';
+      ctx.fillText(char,i*fontSize,drops[i]*fontSize);
+      if(drops[i]*fontSize>canvas.height&&Math.random()>.977)drops[i]=0;
+      else drops[i]+=.45;
+    }
+  }
+  setInterval(draw,60);
+}
+
+/* ── Init code rain once NesAI page activates ── */
+let codeRainInitialised=false;
+function maybeInitCodeRain(){
+  if(!codeRainInitialised){codeRainInitialised=true;setTimeout(initCodeRain,50);}
+}
+
+/* ── Scroll / fade ── */
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>40)});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+},{threshold:.08});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+/* ── NesAI page navigation ── */
+function openNesAI(){
+  const hp=document.getElementById('holding-page');
+  const np=document.getElementById('nesai-page');
+  hp.style.display='none';
+  np.classList.add('active');
+  np.scrollTop=0;
+  window.scrollTo(0,0);
+  maybeInitCodeRain();
+  // Re-trigger fade-ins on nesai page
+  np.querySelectorAll('.fade-in').forEach(el=>{
+    el.classList.remove('visible');
+    setTimeout(()=>obs.observe(el),100);
+  });
+}
+function closeNesAI(){
+  const hp=document.getElementById('holding-page');
+  const np=document.getElementById('nesai-page');
+  np.classList.remove('active');
+  hp.style.display='block';
+  window.scrollTo(0,0);
+}
+document.getElementById('nesai-entry-card').addEventListener('click',openNesAI);
+document.getElementById('back-btn').addEventListener('click',closeNesAI);
+document.getElementById('footer-nesai-link').addEventListener('click',function(e){e.preventDefault();openNesAI()});
+document.getElementById('footer-back-btn').addEventListener('click',function(e){e.preventDefault();closeNesAI()});
+
+/* ── Mobile menu toggle ── */
+function wireMenu(toggleId,menuId){
+  const t=document.getElementById(toggleId);
+  const m=document.getElementById(menuId);
+  if(!t||!m)return;
+  t.addEventListener('click',()=>{
+    const open=m.classList.toggle('open');
+    t.classList.toggle('open',open);
+    t.setAttribute('aria-expanded',open?'true':'false');
+    document.body.style.overflow=open?'hidden':'';
+  });
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    m.classList.remove('open');
+    t.classList.remove('open');
+    t.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }));
+}
+wireMenu('menu-toggle','mobile-menu');
+wireMenu('nesai-menu-toggle','nesai-mobile-menu');
+const nbm=document.getElementById('nesai-back-mobile');
+if(nbm)nbm.addEventListener('click',function(e){e.preventDefault();closeNesAI();});
+
+/* ── Smooth in-page anchor scrolling (works for both window and #nesai-page container) ── */
+document.addEventListener('click',function(e){
+  const a=e.target.closest('a[href^="#"]');
+  if(!a)return;
+  const href=a.getAttribute('href');
+  if(!href||href==='#'||href.length<2)return;
+  const target=document.getElementById(href.slice(1));
+  if(!target)return;
+  e.preventDefault();
+  const nesai=document.getElementById('nesai-page');
+  const inNesai=nesai&&nesai.classList.contains('active')&&nesai.contains(target);
+  const navH=80;
+  if(inNesai){
+    const top=target.getBoundingClientRect().top - nesai.getBoundingClientRect().top + nesai.scrollTop - navH;
+    nesai.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+  } else {
+    const top=target.getBoundingClientRect().top + window.pageYOffset - navH;
+    window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+  }
+  history.replaceState(null,'',href);
+});
+
+/* ── Hero cinematic parallax ── */
+const heroBg=document.querySelector('.hero-cinematic-bg');
+if(heroBg){
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY;
+    heroBg.style.transform=`scale(1.12) translateY(${y*0.18}px)`;
+  },{passive:true});
+}
+
+/* ── Demo bar chart ── */
+function buildChart(){
+  const c=document.getElementById('demoChart');
+  if(!c)return;
+  const vals=[42,58,52,70,84,92,78,73,88,96,82,69,85,98,90];
+  vals.forEach(v=>{
+    const b=document.createElement('div');
+    b.className='bar';
+    b.style.height=v+'%';
+    c.appendChild(b);
+  });
+}
+buildChart();
+
+/* ── Contact form submission — Formspree ── */
+async function handleContactSubmit(e,source){
+  e.preventDefault();
+  const form=e.target;
+  const feedbackId=source==='nesai'?'nesai-feedback':'holdings-feedback';
+  const submitId=source==='nesai'?'nesai-submit':'holdings-submit';
+  const feedback=document.getElementById(feedbackId);
+  const btn=document.getElementById(submitId);
+  const originalText=btn.textContent;
+  const endpoint=source==='nesai'
+    ?'https://formspree.io/f/xgoqqoaw'
+    :'https://formspree.io/f/xykvvkkv';
+
+  btn.textContent='Sending…';
+  btn.disabled=true;
+  feedback.style.display='none';
+
+  try{
+    const res=await fetch(endpoint,{
+      method:'POST',
+      headers:{'Accept':'application/json'},
+      body:new FormData(form)
+    });
+    if(res.ok){
+      feedback.style.background='rgba(45,167,72,.15)';
+      feedback.style.color='#4ade80';
+      feedback.textContent='Thank you — your message has been received. We will be in touch shortly.';
+      feedback.style.display='block';
+      form.reset();
+    }else{
+      const json=await res.json().catch(()=>({}));
+      feedback.style.background='rgba(232,93,58,.15)';
+      feedback.style.color='#ff9f87';
+      feedback.textContent=(json.errors&&json.errors.map(x=>x.message).join(', '))||'Something went wrong. Please try again.';
+      feedback.style.display='block';
+    }
+  }catch(err){
+    feedback.style.background='rgba(232,93,58,.15)';
+    feedback.style.color='#ff9f87';
+    feedback.textContent='Network error. Please check your connection and try again.';
+    feedback.style.display='block';
+  }
+
+  btn.textContent=originalText;
+  btn.disabled=false;
+}
+</script>
+</body>
+</html>
