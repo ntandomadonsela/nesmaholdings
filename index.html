@@ -5,35 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nesma Holdings (Pty) Ltd</title>
 <!-- Nesma Holdings favicon — inline SVG logo mark -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' rx='10' fill='%23101827'/%3E%3C!-- corner brackets --%3E%3Cpath d='M10 5 H5 V10' stroke='%23d4aa52' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 5 H55 V10' stroke='%23d4aa52' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M5 50 V55 H10' stroke='%23d4aa52' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M55 50 V55 H50' stroke='%23d4aa52' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3C!-- N left --%3E%3Ctext x='16' y='40' font-size='24' font-family='Georgia,serif' font-weight='500' fill='%23f3f5fa' text-anchor='middle'%3EN%3C/text%3E%3C!-- centre bar --%3E%3Cline x1='30' y1='16' x2='30' y2='44' stroke='%23d4aa52' stroke-width='1.4'/%3E%3C!-- N right --%3E%3Ctext x='44' y='40' font-size='24' font-family='Georgia,serif' font-weight='500' fill='%23f3f5fa' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' rx='10' fill='%23ffffff'/%3E%3Crect x='1' y='1' width='58' height='58' rx='9' fill='none' stroke='%23e2e6ef' stroke-width='1'/%3E%3C!-- corner brackets --%3E%3Cpath d='M10 5 H5 V10' stroke='%23111a2e' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 5 H55 V10' stroke='%23111a2e' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M5 50 V55 H10' stroke='%23111a2e' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M55 50 V55 H50' stroke='%23111a2e' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3C!-- N left --%3E%3Ctext x='16' y='40' font-size='24' font-family='Georgia,serif' font-weight='500' fill='%23111a2e' text-anchor='middle'%3EN%3C/text%3E%3C!-- centre bar --%3E%3Cline x1='30' y1='16' x2='30' y2='44' stroke='%23111a2e' stroke-width='1.4'/%3E%3C!-- N right --%3E%3Ctext x='44' y='40' font-size='24' font-family='Georgia,serif' font-weight='500' fill='%23111a2e' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
 <link rel="alternate icon" href="data:image/png;base64,iVBORw0KGgo=">
-<meta name="theme-color" content="#101827">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  /* Refined corporate midnight-navy — between the original near-black
-     and the brighter draft. NesAI restores its own dark palette below. */
-  --bg:#101827;
-  --bg2:#162035;
-  --bg3:#1c2942;
-  --surface:#222f4a;
-  --surface2:#2a385a;
-  --border:#2f4163;
-  --border2:#41587e;
-  --border3:#56709a;
-  --gold:#d4aa52;
-  --gold2:#edd98a;
-  --gold3:#b8922a;
+  /* Corporate light theme — white ground, navy ink, gold accent —
+     built to match the Nesma Holdings N|N logo mark.
+     NesAI restores its own dark, techy palette below. */
+  --bg:#ffffff;
+  --bg2:#f6f7fb;
+  --bg3:#eef1f7;
+  --surface:#ffffff;
+  --surface2:#f1f3f8;
+  --border:#e2e6ef;
+  --border2:#c7cfdf;
+  --border3:#a3aec4;
+  --gold:#b8912e;
+  --gold2:#d8b45c;
+  --gold3:#8f701f;
   --silver:#9ca3af;
   --accent:#0ea5e9;
   --accent2:#38bdf8;
   --green:#4ade80;
-  --text:#f3f5fa;
-  --text2:#b8c4dc;
-  --text3:#7c8da9;
+  --text:#111a2e;
+  --text2:#4b5670;
+  --text3:#828db0;
   --font-serif:'Cormorant Garamond',serif;
   --font-sans:'DM Sans',sans-serif;
   --radius:10px;
@@ -59,7 +60,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-sans);font-si
 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:0 5%;height:70px;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
-nav.scrolled{background:rgba(16,24,39,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+nav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 2px 20px rgba(17,26,46,.05)}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none;cursor:pointer}
 .nav-brand .brand-mark{flex-shrink:0;display:block;transition:transform .4s ease,filter .4s ease;filter:drop-shadow(0 2px 6px rgba(243,245,250,.08))}
 .nav-brand:hover .brand-mark{transform:translateY(-1px) scale(1.03);filter:drop-shadow(0 4px 12px rgba(243,245,250,.18))}
@@ -83,7 +84,7 @@ nav.scrolled{background:rgba(16,24,39,.95);backdrop-filter:blur(20px);border-bot
 .menu-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .menu-toggle.open span:nth-child(2){opacity:0}
 .menu-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mobile-menu{position:fixed;inset:70px 0 0 0;background:rgba(16,24,39,.98);backdrop-filter:blur(24px);z-index:290;display:none;flex-direction:column;padding:2rem 5% 3rem;gap:.25rem;overflow-y:auto}
+.mobile-menu{--text:#ffffff;--border:rgba(255,255,255,.16);position:fixed;inset:70px 0 0 0;background:rgba(17,26,46,.98);backdrop-filter:blur(24px);z-index:290;display:none;flex-direction:column;padding:2rem 5% 3rem;gap:.25rem;overflow-y:auto}
 .mobile-menu.open{display:flex}
 .mobile-menu a{color:var(--text);text-decoration:none;font-family:var(--font-serif);font-size:24px;font-weight:400;padding:1rem 0;border-bottom:1px solid var(--border);letter-spacing:.02em}
 .mobile-menu a:last-child{border-bottom:none}
@@ -107,33 +108,37 @@ section{padding:110px 5%}
 #nesai-page.active{display:block;opacity:1}
 
 /* ── HERO ── */
-#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 5%;padding-top:70px;position:relative;overflow:hidden}
+#hero{
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 5%;padding-top:70px;position:relative;overflow:hidden}
 
-/* Cinematic skyline backdrop with Ken-Burns zoom */
+/* Light corporate hero — building photo bleeding in from the right,
+   washed with white so text stays legible and the page still reads white */
 .hero-cinematic-bg{
   position:absolute;inset:0;z-index:0;
   background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=75&auto=format&fit=crop');
   background-size:cover;background-position:center bottom;
-  animation:kenBurns 22s ease-in-out infinite alternate;
+  animation:kenBurns 24s ease-in-out infinite alternate;
   transform-origin:center center;
+  filter:saturate(.5) brightness(1.05);
 }
 @keyframes kenBurns{
-  0%{transform:scale(1.0) translateX(0);filter:brightness(.22) saturate(0.8)}
-  100%{transform:scale(1.12) translateX(-2%);filter:brightness(.18) saturate(0.6)}
+  0%{transform:scale(1.0) translateX(0)}
+  100%{transform:scale(1.1) translateX(-2%)}
 }
 .hero-cinematic-overlay{
   position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,
-    rgba(10,14,22,.55) 0%,
-    rgba(10,14,22,.3) 40%,
-    rgba(10,14,22,.65) 75%,
-    rgba(16,24,39,1) 100%
+  background:linear-gradient(100deg,
+    rgba(255,255,255,.99) 0%,
+    rgba(255,255,255,.94) 28%,
+    rgba(255,255,255,.72) 50%,
+    rgba(255,255,255,.32) 72%,
+    rgba(255,255,255,.08) 100%
   );
 }
-/* Subtle vignette edges */
+/* Fade the photo smoothly into the white section below */
 .hero-cinematic-vignette{
   position:absolute;inset:0;z-index:2;
-  background:radial-gradient(ellipse 90% 80% at 50% 50%,transparent 50%,rgba(10,14,22,.55) 100%);
+  background:linear-gradient(180deg,rgba(255,255,255,0) 55%,rgba(255,255,255,.95) 100%);
   pointer-events:none;
 }
 
@@ -143,11 +148,11 @@ section{padding:110px 5%}
 .orb-blue{width:350px;height:350px;background:radial-gradient(circle,rgba(14,165,233,.1) 0%,transparent 70%);bottom:0;left:8%}
 /* All hero content needs z-index above backdrop */
 #hero > *:not(.hero-cinematic-bg):not(.hero-cinematic-overlay):not(.hero-cinematic-vignette):not(.hero-grid):not(.hero-orb){position:relative;z-index:5}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 16px;border:1px solid var(--border2);border-radius:100px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text3);margin-bottom:2.25rem;background:rgba(34,47,74,.7);backdrop-filter:blur(8px);font-family:var(--font-sans)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 16px;border:1px solid var(--border2);border-radius:100px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text3);margin-bottom:2.25rem;background:rgba(255,255,255,.8);backdrop-filter:blur(8px);font-family:var(--font-sans);box-shadow:0 1px 3px rgba(17,26,46,.04)}
 .hero-eyebrow .pulse{width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px var(--gold);animation:pulse 2.5s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 /* Bolder serif hero title */
-h1.hero-title{font-family:var(--font-serif);font-size:clamp(52px,8.5vw,108px);font-weight:600;line-height:.97;letter-spacing:-.015em;max-width:960px;margin-bottom:1.25rem;text-shadow:0 2px 32px rgba(0,0,0,.6)}
+h1.hero-title{font-family:var(--font-serif);font-size:clamp(52px,8.5vw,108px);font-weight:600;line-height:.97;letter-spacing:-.015em;max-width:960px;margin-bottom:1.25rem}
 .hero-title em{font-style:italic;color:var(--gold);font-weight:500}
 .hero-sectors-row{display:flex;gap:.625rem;flex-wrap:wrap;margin-bottom:1.75rem}
 .s-tag{padding:4px 14px;border:1px solid var(--border);border-radius:100px;font-size:11px;color:var(--text3);letter-spacing:.06em;font-family:var(--font-sans);font-weight:400;transition:border-color .2s,color .2s}
@@ -171,7 +176,7 @@ h1.hero-title{font-family:var(--font-serif);font-size:clamp(52px,8.5vw,108px);fo
 }
 .ceo-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.25rem}
 .ceo-block-inner{padding:2.25rem}
-.ceo-monogram{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:26px;font-weight:500;color:var(--bg);margin-bottom:1.25rem;letter-spacing:.05em}
+.ceo-monogram{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:26px;font-weight:500;color:var(--text);margin-bottom:1.25rem;letter-spacing:.05em}
 .ceo-name{font-family:var(--font-serif);font-size:22px;font-weight:500;margin-bottom:.2rem}
 .ceo-role{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-family:var(--font-sans)}
 .ceo-bio{font-size:13px;color:var(--text2);line-height:1.75;font-weight:300}
